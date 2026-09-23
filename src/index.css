@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FAF8F5;
+    color: #182430;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF8F5;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #E2DDD5;
+    border-radius: 9999px;
+    border: 2px solid #FAF8F5;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FDA4AF;
+  }
+}
+
+/* Multi-color Pastel Mesh Gradients */
+.bg-pastel-mesh {
+  background-color: #FAF8F5;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(253, 164, 175, 0.28) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(125, 211, 252, 0.32) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(254, 224, 71, 0.22) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(134, 239, 172, 0.28) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(216, 180, 254, 0.32) 0px, transparent 50%);
+}
+
+.bg-pastel-hero {
+  background: radial-gradient(circle at 20% 20%, rgba(253, 164, 175, 0.35) 0%, transparent 40%),
+              radial-gradient(circle at 80% 20%, rgba(125, 211, 252, 0.4) 0%, transparent 45%),
+              radial-gradient(circle at 50% 80%, rgba(253, 186, 116, 0.3) 0%, transparent 45%),
+              radial-gradient(circle at 10% 80%, rgba(134, 239, 172, 0.3) 0%, transparent 40%),
+              radial-gradient(circle at 90% 75%, rgba(216, 180, 254, 0.35) 0%, transparent 40%),
+              #FAF8F5;
+}
+
+.bg-glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 30px -5px rgba(24, 36, 48, 0.04), 0 4px 12px -2px rgba(253, 164, 175, 0.08);
+}
+
+.bg-glass-pill {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 20px -2px rgba(125, 211, 252, 0.15);
+}
+
+.bg-glass-navbar {
+  background: rgba(250, 248, 245, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(226, 221, 213, 0.4);
+}
+
+/* Text Gradients */
+.text-gradient-coral-sky {
+  background: linear-gradient(135deg, #E11D48 0%, #EA580C 50%, #0284C7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-noosa {
+  background: linear-gradient(135deg, #0284C7 0%, #0D9488 40%, #D97706 80%, #E11D48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-sunset {
+  background: linear-gradient(135deg, #F43F5E 0%, #FB923C 50%, #FBBF24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle dot grid pattern */
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(24, 36, 48, 0.08) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+/* Organic sticker border */
+.sticker-badge {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.sticker-badge:hover {
+  transform: translateY(-4px) scale(1.04) rotate(1deg);
+}
+
+/* Floating animation utilities */
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 3s ease-in-out infinite;
+}
